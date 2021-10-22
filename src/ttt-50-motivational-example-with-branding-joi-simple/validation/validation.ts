@@ -1,13 +1,5 @@
 import joi from 'joi';
 
-type alphaNum = 'a' | 'b'
-
-type Id2 = {
-  firstCharacter: alphaNum;
-  secondCharacter: alphaNum;
-  //...
-};
-
 class IdBrand { private readonly brand = 'Id'; }
 export type Id = string & IdBrand; // length 8, no spaces
 const idSchema = joi.string().length(8).alphanum();
